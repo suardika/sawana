@@ -64,6 +64,12 @@ class JW_Twitter_Widget extends WP_Widget {
 
     private function twitter($tweet_count, $username) {
       if (empty($username)) return false;
+      $this->fetch_tweets($tweet_count, $username);
+    }
+
+    private function fetch_tweets($tweet_count, $username) {
+      $tweets = wp_remote_get("https://api.twitter.com/1.1/statuses/$username.json");
+      print_r($tweets);
     }
 }
  
