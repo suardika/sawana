@@ -8,7 +8,7 @@
 <title>STRUCT</title>
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" href="images/favicon.ico">
+<link rel="icon" href="<?php echo get_bloginfo('template_directory');?>/assets/images/favicon.ico">
 
 <?php wp_head(); ?>
 
@@ -77,130 +77,23 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="navbar-brand" href="index-2.html"><img src="images/logo.png" class="img-responsive" alt="" /></a></div>
+          <a class="navbar-brand" href="index-2.html"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/logo.png" class="img-responsive" alt="" /></a></div>
         <!-- end .navbar-header -->
         
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" data-submenu>Home <i class="fa fa-angle-down"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="index-2.html">Home</a></li>
-                <li><a href="index2.html">Home 2</a></li>
-                <li><a href="index3.html">Home 3</a></li>
-                <li><a href="index4.html">Home 4</a></li>
-                <li><a href="index-onepage.html">Home Onepage</a></li>
-                <li><a href="index-owl.html">Home OwlCarousel</a></li>
-                <li class="dropdown-submenu"><a href="#">Sub menu</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Second Level</a></li>
-                    <li><a href="#">Second Level</a></li>
-                    <li class="dropdown-submenu"><a href="#">Second Level</a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Third Level</a></li>
-                        <li><a href="#">Third Level</a></li>
-                      </ul>
-                    </li>
-                    <!-- end .dropdown-submenu -->
-                  </ul>
-                </li>
-                <!-- end .dropdown-submenu -->
-                
-              </ul>
-            </li>
-            <li><a href="about.html">About Us</a></li>
-            <li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <div class="yamm-content">
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <h4>Features</h4>
-                        <ul class="icon-arrow-list">
-                          <li><a href="about-me.html"><i class="fa fa-angle-right"></i> About Me</a></li>
-                          <li><a href="team.html"><i class="fa fa-angle-right"></i> Team</a></li>
-                          <li><a href="service.html"><i class="fa fa-angle-right"></i> Service</a></li>
-                        </ul>
-                      </div>
-                      <!-- end .col-sm-3 -->
-                      
-                      <div class="col-sm-3">
-                        <h4>Shortcodes</h4>
-                        <ul class="icon-arrow-list">
-                          <li><a href="elements.html"><i class="fa fa-angle-right"></i> Elements</a></li>
-                          <li><a href="typography.html"><i class="fa fa-angle-right"></i> Typography</a></li>
-                          <li><a href="pricing.html"><i class="fa fa-angle-right"></i> Pricing Tables</a></li>
-                        </ul>
-                      </div>
-                      <!-- end .col-sm-3 -->
-                      
-                      <div class="col-sm-3">
-                        <h4>Shortcodes</h4>
-                        <ul class="icon-arrow-list">
-                          <li><a href="faq.html"><i class="fa fa-angle-right"></i> FAQ</a></li>
-                          <li><a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a></li>
-                          <li><a href="animations.html"><i class="fa fa-angle-right"></i> Animations</a></li>
-                        </ul>
-                      </div>
-                      <!-- end .col-sm-3 -->
-                      
-                      <div class="col-sm-3">
-                        <h4>Pages</h4>
-                        <ul class="icon-arrow-list">
-                          <li><a href="sitemap.html"><i class="fa fa-angle-right"></i> Sitemap</a></li>
-                          <li><a href="404.html"><i class="fa fa-angle-right"></i> 404 Page</a></li>
-                          <li><a href="search-results.html"><i class="fa fa-angle-right"></i> Search Results</a></li>
-                        </ul>
-                      </div>
-                      <!-- end .col-sm-3 --> 
-                      
-                    </div>
-                    <!-- end .row --> 
-                  </div>
-                  <!-- end .yamm-content --> 
-                  
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Portfolio <i class="fa fa-angle-down"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="portfolio4.html">Portfolio 4</a></li>
-                <li><a href="portfolio3.html">Portfolio 3</a></li>
-                <li><a href="portfolio2.html">Portfolio 2</a></li>
-                <li><a href="portfolio4-title.html">Portfolio 4 Title</a></li>
-                <li><a href="portfolio3-title.html">Portfolio 3 Title</a></li>
-                <li><a href="portfolio2-title.html">Portfolio 2 Title</a></li>
-                <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
-                <li><a href="portfolio-masonry-title.html">Portfolio Masonry Title</a></li>
-                <li><a href="portfolio-fullwidth.html">Portfolio Fullwidth</a></li>
-                <li><a href="portfolio-single.html">Portfolio Single Project</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Shop <i class="fa fa-angle-down"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="shop4.html">Shop 4</a></li>
-                <li><a href="shop3.html">Shop 3</a></li>
-                <li><a href="shop3-sidebar.html">Shop 3 Sidebar</a></li>
-                <li><a href="shop-single.html">Shop Single</a></li>
-                <li><a href="shop-cart.html">Shop Cart</a></li>
-                <li><a href="shop-checkout.html">Shop Checkout</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Blog <i class="fa fa-angle-down"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="blog-large.html">Blog Large</a></li>
-                <li><a href="blog-middle.html">Blog Middle</a></li>
-                <li><a href="blog-post.html">Blog Post</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Contact <i class="fa fa-angle-down"></i></a>
-              <ul class="dropdown-menu dropdown-menu-right">
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact2.html">Contact 2</a></li>
-              </ul>
-            </li>
-          </ul>
-          <!-- end .nav navbar-nav --> 
-        </div>
+
+          <?php  
+            wp_nav_menu(array(
+            'menu'              => 'primary',
+            'theme_location'    => 'primary',
+            'depth'             => 4,
+            'container'         => 'div',
+            'container_class'   => 'collapse navbar-collapse',
+            'container_id'      => 'bs-example-navbar-collapse-1',
+            'menu_class'        => 'nav navbar-nav yamm',
+            'fallback_cb'       => 'Yamm_Nav_Walker_menu_fallback',
+            'walker'            => new Yamm_Nav_Walker())
+            );
+          ?>
         <!-- end .navbar-collapse collapse --> 
         
       </div>
@@ -220,9 +113,9 @@
       <ul>
         
         <!-- SLIDE 1  -->
-        <li data-index="rs-1" data-transition="random-premium" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000"  data-thumb="images/slider/thumb/thumb1.jpg"  data-rotate="0"  data-fstransition="random-premium" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Thumb Title 1" data-description=""> 
+        <li data-index="rs-1" data-transition="random-premium" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000"  data-thumb="<?php echo get_bloginfo('template_directory');?>/assets/images/slider/thumb/thumb1.jpg"  data-rotate="0"  data-fstransition="random-premium" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Thumb Title 1" data-description=""> 
           <!-- MAIN IMAGE --> 
-          <img src="images/slider/slider1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/slider/slider1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
           <!-- LAYERS --> 
           
           <!-- LAYER NR. 1 -->
@@ -241,7 +134,7 @@
     data-basealign="grid" 
     data-responsive_offset="on" 
     data-responsive="on"
-    style="z-index: 6;"><img src="images/slider/item1.png" alt=""> </div>
+    style="z-index: 6;"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/slider/item1.png" alt=""> </div>
           
           <!-- LAYER NR. 2 -->
           <div class="tp-caption theme-medium tp-resizeme rs-parallaxlevel-0" 
@@ -327,9 +220,9 @@
         </li>
         
         <!-- SLIDE 2  -->
-        <li data-index="rs-2" data-transition="random-premium" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000"  data-thumb="images/slider/thumb/thumb2.jpg"  data-rotate="0"  data-fstransition="random-premium" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Thumb Title 1" data-description=""> 
+        <li data-index="rs-2" data-transition="random-premium" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000"  data-thumb="<?php echo get_bloginfo('template_directory');?>/assets/images/slider/thumb/thumb2.jpg"  data-rotate="0"  data-fstransition="random-premium" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Thumb Title 1" data-description=""> 
           <!-- MAIN IMAGE --> 
-          <img src="images/slider/slider2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/slider/slider2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
           <!-- LAYERS --> 
           
           <!-- LAYER NR. 1 -->
@@ -348,7 +241,7 @@
     data-basealign="grid" 
     data-responsive_offset="on" 
     data-responsive="on"
-    style="z-index: 6;"><img src="images/slider/item2.png" alt=""> </div>
+    style="z-index: 6;"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/slider/item2.png" alt=""> </div>
           
           <!-- LAYER NR. 2 -->
           <div class="tp-caption theme-medium tp-resizeme rs-parallaxlevel-0" 
@@ -433,9 +326,9 @@
     style="z-index: 10;"><span><i class="fa fa-chevron-circle-right"></i></span>READ MORE</a> </li>
         
         <!-- SLIDE 3  -->
-        <li data-index="rs-3" data-transition="random-premium" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000"  data-thumb="images/slider/thumb/thumb3.jpg"  data-rotate="0"  data-fstransition="random-premium" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Thumb Title 3" data-description=""> 
+        <li data-index="rs-3" data-transition="random-premium" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000"  data-thumb="<?php echo get_bloginfo('template_directory');?>/assets/images/slider/thumb/thumb3.jpg"  data-rotate="0"  data-fstransition="random-premium" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Thumb Title 3" data-description=""> 
           <!-- MAIN IMAGE --> 
-          <img src="images/slider/slider3.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/slider/slider3.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
           <!-- LAYERS --> 
           
           <!-- LAYER NR. 1 -->
@@ -536,9 +429,9 @@
     <div class="row">
       <div class="col-md-4">
         <div class="mt-120">
-          <figure class="effect-phoebe"> <img src="images/features/studio1-thumb.jpg" alt=""/>
+          <figure class="effect-phoebe"> <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio1-thumb.jpg" alt=""/>
             <figcaption>
-              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="images/features/studio1.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
+              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio1.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
             </figcaption>
           </figure>
           <div class="clearfix"></div>
@@ -555,9 +448,9 @@
       
       <div class="col-md-4">
         <div class="mt-120">
-          <figure class="effect-phoebe"> <img src="images/features/studio2-thumb.jpg" alt=""/>
+          <figure class="effect-phoebe"> <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio2-thumb.jpg" alt=""/>
             <figcaption>
-              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="images/features/studio2.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
+              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio2.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
             </figcaption>
           </figure>
           <div class="clearfix"></div>
@@ -574,9 +467,9 @@
       
       <div class="col-md-4">
         <div class="mt-120">
-          <figure class="effect-phoebe"> <img src="images/features/studio3-thumb.jpg" alt=""/>
+          <figure class="effect-phoebe"> <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio3-thumb.jpg" alt=""/>
             <figcaption>
-              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="images/features/studio3.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
+              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio3.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
             </figcaption>
           </figure>
           <div class="clearfix"></div>
@@ -602,7 +495,7 @@
   <!-- Wide Box Gray
 ================================================== -->
   <div class="widebox-gray">
-    <div class="absolute-left"><img src="images/features/absolute-left.png" alt="" /></div>
+    <div class="absolute-left"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/absolute-left.png" alt="" /></div>
     <!-- end .absolute-left -->
     
     <div class="container-fluid">
@@ -728,9 +621,9 @@
         <!-- end .mb-20 -->
         
         <div class="owl-single owl-carousel owl-theme">
-          <div class="item"><img src="images/features/studio4-thumb.jpg" alt="" /></div>
-          <div class="item"><img src="images/features/studio5-thumb.jpg" alt="" /></div>
-          <div class="item"><img src="images/features/studio6-thumb.jpg" alt="" /></div>
+          <div class="item"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio4-thumb.jpg" alt="" /></div>
+          <div class="item"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio5-thumb.jpg" alt="" /></div>
+          <div class="item"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/studio6-thumb.jpg" alt="" /></div>
         </div>
         <!-- end .owl-single -->
         
@@ -742,9 +635,9 @@
       
       <div class="col-md-6">
         <div class="photobox1">
-          <figure class="effect-phoebe"> <img src="images/features/photobox1-thumb.jpg" alt=""/>
+          <figure class="effect-phoebe"> <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/photobox1-thumb.jpg" alt=""/>
             <figcaption>
-              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="images/features/photobox1.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
+              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="<?php echo get_bloginfo('template_directory');?>/assets/images/features/photobox1.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
             </figcaption>
           </figure>
           <div class="photobox1-content">
@@ -757,9 +650,9 @@
         <!-- end .photobox1 -->
         
         <div class="photobox1">
-          <figure class="effect-phoebe"> <img src="images/features/photobox2-thumb.jpg" alt=""/>
+          <figure class="effect-phoebe"> <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/photobox2-thumb.jpg" alt=""/>
             <figcaption>
-              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="images/features/photobox2.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
+              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="<?php echo get_bloginfo('template_directory');?>/assets/images/features/photobox2.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
             </figcaption>
           </figure>
           <div class="photobox1-content">
@@ -772,9 +665,9 @@
         <!-- end .photobox1 -->
         
         <div class="photobox1">
-          <figure class="effect-phoebe"> <img src="images/features/photobox3-thumb.jpg" alt=""/>
+          <figure class="effect-phoebe"> <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/features/photobox3-thumb.jpg" alt=""/>
             <figcaption>
-              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="images/features/photobox3.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
+              <p> <a href="#"><i class="fa fa-link effect-8"></i></a> <a class="nivo-lightbox" href="<?php echo get_bloginfo('template_directory');?>/assets/images/features/photobox3.jpg" title="This is an image title"><i class="fa fa-search effect-8"></i></a> </p>
             </figcaption>
           </figure>
           <div class="photobox1-content">
@@ -826,7 +719,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <div class="footer-about"> <a href="index-2.html"><img src="images/logo-footer.png" alt="" /></a>
+          <div class="footer-about"> <a href="index-2.html"><img src="<?php echo get_bloginfo('template_directory');?>/assets/images/logo-footer.png" alt="" /></a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
             <div class="mb-20"></div>
             <!-- end .mb-20 -->
