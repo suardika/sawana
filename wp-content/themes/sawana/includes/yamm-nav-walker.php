@@ -29,8 +29,8 @@ class Yamm_Nav_Walker extends Walker_Nav_Menu
 
         if ($item->is_dropdown && ($depth === 0))
         {
-            $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
-            $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
+            $item_html = str_replace('<a', '<a class="dropdown-toggle data-toggle="dropdown" data-target="#"', $item_html);
+            $item_html = str_replace('</a>', '<i class="fa fa-chevron-down"></i></a>', $item_html);
         }
 
         elseif (stristr($item_html, 'li class="divider'))
@@ -152,7 +152,7 @@ class Yamm_Fw_Nav_Walker extends Walker_Nav_Menu
         if ($item->is_dropdown && ($depth === 0))
         {
             $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
-            $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
+            $item_html = str_replace('</a>', ' <i class="fa fa-chevron-down"></i></a>', $item_html);
         }
 
         elseif (stristr($item_html, 'li class="divider'))
