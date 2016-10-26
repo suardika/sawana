@@ -20,12 +20,13 @@
     </div>
     <!-- end .pagetitle-overlay --> 
   </div>
+
+
   <!-- end .pagetitle -->
   <div class="mb-100"></div>
   <!-- end .mb-100 --> 
   
-  <!-- Blog Middle-->
-  
+  <!-- Blog Middle--> 
   <div class="container">
     <div class="row">
       <div class="col-md-9">
@@ -58,8 +59,8 @@
 
                         <div class="clearfix"></div>
                         <!-- end .clearfix -->
-                        <div class="blog-info">
-                          <p><?php the_time( 'd M' ); ?></p>
+                        <div class="blog-info">                        
+                          <p><?php the_time(d); ?><span><?php echo strtoupper(get_the_time(M));?></span></p>
                         </div>
                         <!-- end .blog-info --> 
                       </div>
@@ -73,7 +74,11 @@
                         <!-- end .blog-title-icon -->
                         <div class="blog-title-body">
                           <h3><?php the_title(); ?></h3>
-                          <span><i class="fa fa-user"></i><a href="#"> by Author</a></span> <span><i class="fa fa-comments-o"></i><a href="#"> 2 Comments</a></span> </div>
+                          <span><i class="fa fa-calendar"></i><a><?php echo sprintf(get_the_time('jS F Y')); ?></a></span>
+                          <span><i class="fa fa-user"></i><a href="<?php the_author_link(); ?>"><?php the_author(); ?></a></span>
+                          <span><i class="fa fa-comments-o"></i><a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></span>
+                          <span><i class="fa fa-comments-o"></i><a href="<?php get_category_link( $category_id ); ?>"><?php the_category(','); ?></a></span>
+                        </div>
                         <!-- end .blog-title-body --> 
                       </div>
                       <!-- end .blog-title -->
@@ -81,8 +86,8 @@
                       <!-- end .clearfix -->
                       
                       <div class="blog-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p><a href="#" class="btn btn-theme"><span><i class="fa fa-chevron-circle-right"></i></span>Read More</a></p>
+                        <p><?php the_excerpt(); ?></p>
+                        <p><a href="<?php the_permalink(); ?>" class="btn btn-theme"><span><i class="fa fa-chevron-circle-right"></i></span>Read More</a></p>
                       </div>
                       <!-- end .blog-content --> 
                     </div>
@@ -91,7 +96,6 @@
                   <!-- end .row --> 
                 </div>
                 <?php
-
             } // end while
           } // end if
         ?>
@@ -101,13 +105,15 @@
         <!-- end .mb-30 --> 
         
         <!-- PAGINATION -->
-        <ul class="pagination">
-          <li><a href="#">&laquo;</a></li>
-          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
+
+        <?php 
+          if (function_exists("wp_bs_pagination"))
+            {
+              //wp_bs_pagination($the_query->max_num_pages);
+              wp_bs_pagination();
+            }
+        ?>
+
       </div>
       <!-- end .col-md-9 --> 
       
