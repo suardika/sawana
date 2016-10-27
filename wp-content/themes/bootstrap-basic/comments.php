@@ -2,7 +2,7 @@
 /**
  * Template for displaying comments
  * 
- * @package sawana
+ * @package bootstrap-basic
  */
 
 
@@ -17,15 +17,15 @@ if (post_password_required()) {
 	<?php if (have_comments()) { ?>
 		<h2 class="comments-title">
 			<?php
-			printf(_nx('One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sawana'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>');
+			printf(_nx('One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'bootstrap-basic'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>');
 			?> 
 		</h2>
 
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) { // are there comments to navigate through  ?> 
-			<h3 class="screen-reader-text sr-only"><?php _e('Comment navigation', 'sawana'); ?></h3>
+			<h3 class="screen-reader-text sr-only"><?php _e('Comment navigation', 'bootstrap-basic'); ?></h3>
 			<ul id="comment-nav-above" class="comment-navigation pager" role="navigation">
-				<li class="nav-previous previous"><?php previous_comments_link(__('&larr; Older Comments', 'sawana')); ?></li>
-				<li class="nav-next next"><?php next_comments_link(__('Newer Comments &rarr;', 'sawana')); ?></li>
+				<li class="nav-previous previous"><?php previous_comments_link(__('&larr; Older Comments', 'bootstrap-basic')); ?></li>
+				<li class="nav-next next"><?php next_comments_link(__('Newer Comments &rarr;', 'bootstrap-basic')); ?></li>
 			</ul><!-- #comment-nav-above -->
 		<?php } // check for comment navigation  ?> 
 
@@ -42,10 +42,10 @@ if (post_password_required()) {
 		</ul><!-- .comment-list -->
 
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) { // are there comments to navigate through  ?> 
-			<h3 class="screen-reader-text sr-only"><?php _e('Comment navigation', 'sawana'); ?></h3>
+			<h3 class="screen-reader-text sr-only"><?php _e('Comment navigation', 'bootstrap-basic'); ?></h3>
 			<ul id="comment-nav-below" class="comment-navigation comment-navigation-below pager" role="navigation">
-				<li class="nav-previous previous"><?php previous_comments_link(__('&larr; Older Comments', 'sawana')); ?></li>
-				<li class="nav-next next"><?php next_comments_link(__('Newer Comments &rarr;', 'sawana')); ?></li>
+				<li class="nav-previous previous"><?php previous_comments_link(__('&larr; Older Comments', 'bootstrap-basic')); ?></li>
+				<li class="nav-next next"><?php next_comments_link(__('Newer Comments &rarr;', 'bootstrap-basic')); ?></li>
 			</ul><!-- #comment-nav-below -->
 		<?php } // check for comment navigation  ?> 
 
@@ -54,7 +54,7 @@ if (post_password_required()) {
 	<?php
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if (!comments_open() && '0' != get_comments_number() && post_type_supports(get_post_type(), 'comments')) { ?> 
-		<p class="no-comments"><?php _e('Comments are closed.', 'sawana'); ?></p>
+		<p class="no-comments"><?php _e('Comments are closed.', 'bootstrap-basic'); ?></p>
 	<?php 
 	} //endif; 
 	?> 
@@ -93,19 +93,19 @@ if (post_password_required()) {
 			'class_submit' => 'btn btn-primary',
 			'fields' => array(
 				'author' => '<div class="form-group">' . 
-							'<label class="control-label col-md-2" for="author">' . __('Name', 'sawana') . ($req ? ' <span class="required">*</span>' : '') . '</label> ' .
+							'<label class="control-label col-md-2" for="author">' . __('Name', 'bootstrap-basic') . ($req ? ' <span class="required">*</span>' : '') . '</label> ' .
 							'<div class="col-md-10">' . 
 							'<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' class="form-control" />' . 
 							'</div>' . 
 							'</div>',
 				'email'  => '<div class="form-group">' . 
-							'<label class="control-label col-md-2" for="email">' . __('Email', 'sawana') . ($req ? ' <span class="required">*</span>' : '') . '</label> ' .
+							'<label class="control-label col-md-2" for="email">' . __('Email', 'bootstrap-basic') . ($req ? ' <span class="required">*</span>' : '') . '</label> ' .
 							'<div class="col-md-10">' . 
 							'<input id="email" name="email" ' . ($html5 ? 'type="email"' : 'type="text"') . ' value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' class="form-control" />' . 
 							'</div>' . 
 							'</div>',
 				'url'    => '<div class="form-group">' . 
-							'<label class="control-label col-md-2" for="url">' . __('Website', 'sawana') . '</label> ' .
+							'<label class="control-label col-md-2" for="url">' . __('Website', 'bootstrap-basic') . '</label> ' .
 							'<div class="col-md-10">' . 
 							'<input id="url" name="url" ' . ($html5 ? 'type="url"' : 'type="text"') . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" class="form-control" />' . 
 							'</div>' . 
@@ -118,7 +118,7 @@ if (post_password_required()) {
 							'</div>' . 
 							'</div>',
 			'comment_notes_after' => '<p class="help-block">' . 
-							sprintf(__('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'sawana'), $comment_allowed_tags) . 
+							sprintf(__('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'bootstrap-basic'), $comment_allowed_tags) . 
 							'</p>'
 		)
 	); 
