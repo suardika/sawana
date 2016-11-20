@@ -65,7 +65,7 @@ if (post_password_required()) {
 	$html5 = true;
 	
 	// re-format comment allowed tags
-	$comment_allowedtags = allowed_tags();
+	
 	$comment_allowedtags = str_replace(array("\r\n", "\r", "\n"), '', $comment_allowedtags);
 	$comment_allowedtags_array = explode('&gt; &lt;', $comment_allowedtags);
 	$formatted_comment_allowedtags = '';

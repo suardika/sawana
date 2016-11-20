@@ -1,0 +1,5 @@
+#!/bin/sh
+# Dump a fresh copy of the database
+C:/wamp/bin/mysql/mysql5.7.14/bin/mysqldump -u root --password="" --skip-extended-insert sawana_db > C:/wamp/www/sawana/sawana_db.sql
+cd C:/wamp/www/sawana/
+git add sawana_db.sql
