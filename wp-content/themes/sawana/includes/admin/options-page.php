@@ -9,7 +9,7 @@ function sw_theme_opts_page() {
 	        </div>
 	        <div class="panel-body">
 	            <?php
-	                if(isset($_GET['statue']) && $_GET['status'] == 1) {
+	                if(isset($_GET['status']) && $_GET['status'] == 1) {
 	                    ?>
 	                    <div class="alert alert-success">Success!</div>
 	                    <?php
@@ -21,7 +21,7 @@ function sw_theme_opts_page() {
 	                <h4><?php _e('Social Icons', 'sawana'); ?></h4>
 	                <div class="form-group">
 	                    <label><?php _e('Twitter', 'sawana'); ?></label>
-	                    <input type="text" class="form-control" name="sw_inputTwitter" value="<?php echo $theme_opts['twiiter']; ?>">
+	                    <input type="text" class="form-control" name="sw_inputTwitter" value="<?php echo $theme_opts['twitter']; ?>">
 	                </div>
 	                <div class="form-group">
 	                    <label><?php _e('Facebook', 'sawana'); ?></label>
@@ -41,9 +41,9 @@ function sw_theme_opts_page() {
 	                </div>
 	                <div class="input-group">
 	                    <input type="text" class="form-control" placeholder="Logo Image" name="sw_inputLogoImg" value="<?php echo $theme_opts['logo_img']; ?>">
-	                        <span class="input-group-btn">
-	                            <button class="btn btn-primary" type="button" id="sw_uploadLogoImgBtn"><?php _e('Upload', 'sawana'); ?></button>
-	                        </span>
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" id="sw_uploadLogoImgBtn"><?php _e('Upload', 'sawana'); ?></button>
+                        </span>
 	                </div>
 	                <h4><?php _e('Footer', 'sawana'); ?></h4>
 	                <div class="form-group">

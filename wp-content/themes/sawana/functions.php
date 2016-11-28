@@ -16,6 +16,7 @@ include ( get_template_directory() . '/includes/activate.php' );
 include ( get_template_directory() . '/includes/admin/menus.php' );
 include ( get_template_directory() . '/includes/admin/options-page.php' );
 include ( get_template_directory() . '/includes/admin/init.php' );
+include ( get_template_directory() . '/process/save-options.php' );
 
 // Action & filter Hooks
 add_filter( 'show_admin_bar', '__return_false' );

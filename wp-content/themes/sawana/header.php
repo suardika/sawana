@@ -1,3 +1,7 @@
+<?php
+$theme_opts = get_option('sw_opts');
+?>
+
 <!doctype html>
 <!--[if !IE]>
 <html class="no-js non-ie" <?php language_attributes(); ?>> <![endif]-->
