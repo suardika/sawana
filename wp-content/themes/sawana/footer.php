@@ -96,8 +96,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <div class="copyright">&copy; 2016 STRUCT. All Rights Reserved.</div>
+
+          <?php
+            $theme_opts = get_option('sw_opts');
+          ?>
+
+          <div class="copyright"><?php echo $theme_opts['footer']; ?></div>
           <!-- end .copyright --> 
+
+
         </div>
         <!-- end .col-md-8 -->
         

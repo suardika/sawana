@@ -54,10 +54,18 @@ $theme_opts = get_option('sw_opts');
         
         <div class="col-md-4">
           <ul class="social-icons pull-right">
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-flickr"></i></a></li>
-            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+
+            <?php
+              if(!empty($theme_opts['twitter'])) {
+                ?><li><a href="https://twitter.com/<?php echo $theme_opts['twitter']; ?>"><i class="fa fa-twitter"></i></a></li><?php
+              }
+              if(!empty($theme_opts['facebook'])) {
+                ?><li><a href="https://facebook.com/<?php echo $theme_opts['facebook']; ?>"><i class="fa fa-facebook"></i></a></li><?php
+              }
+              if(!empty($theme_opts['youtube'])) {
+                ?><li><a href="https://youtube.com/user/<?php echo $theme_opts['youtube']; ?>"><i class="fa fa-youtube"></i></a></li><?php
+              }
+            ?>
             <li class="topbar-search dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
               <ul class="dropdown-menu pull-right">
                 <li>
@@ -89,8 +97,17 @@ $theme_opts = get_option('sw_opts');
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="navbar-brand" href="index-2.html"><?php bloginfo(name); ?><!-- <img src="<?php echo get_bloginfo('template_directory');?>/assets/images/logo.png" class="img-responsive" alt="" /> --></a></div>
-        <!-- end .navbar-header -->
+
+            <?php
+              if($theme_opts['logo_type'] == 1) {
+                ?><a class="navbar-brand" href="index-2.html"><?php bloginfo('name'); ?></a><?php
+              }else{
+                ?><a class="navbar-brand" href="index-2.html"><img src="<?php echo $theme_opts['logo_img']; ?>"></a><?php
+              }
+            ?>
+
+        </div>
+        <!-- end .navbar-header --> 
       
         <div class="navbar-collapse collapse">
 

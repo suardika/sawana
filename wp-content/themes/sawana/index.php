@@ -56,11 +56,10 @@
                           }
                         ?>
 
-
                         <div class="clearfix"></div>
                         <!-- end .clearfix -->
                         <div class="blog-info">                        
-                          <p><?php the_time(d); ?><span><?php echo strtoupper(get_the_time(M));?></span></p>
+                          <p><?php the_time('d'); ?><span><?php echo strtoupper(get_the_time('M'));?></span></p>
                         </div>
                         <!-- end .blog-info --> 
                       </div>
@@ -77,7 +76,7 @@
                           <span><i class="fa fa-calendar"></i><a><?php echo sprintf(get_the_time('jS F Y')); ?></a></span>
                           <span><i class="fa fa-user"></i><a href="<?php the_author_link(); ?>"><?php the_author(); ?></a></span>
                           <span><i class="fa fa-comments-o"></i><a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></span>
-                          <span><i class="fa fa-comments-o"></i><a href="<?php get_category_link( $category_id ); ?>"><?php the_category(','); ?></a></span>
+                          <span><i class="fa fa-comments-o"></i><a href="<?php get_category_link( '$category_id'); ?>"><?php the_category(','); ?></a></span>
                         </div>
                         <!-- end .blog-title-body --> 
                       </div>

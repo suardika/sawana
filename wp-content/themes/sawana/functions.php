@@ -5,7 +5,6 @@ add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
 
-
 // includes
 include ( get_template_directory() . '/includes/front/enqueue.php' );
 include ( get_template_directory() . '/includes/setup.php' );
