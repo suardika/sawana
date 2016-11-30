@@ -20,6 +20,7 @@ define( 'RECIPE_PLUGIN_URL', __FILE__ );
 include( 'includes/activate.php' );
 include( 'includes/init.php' );
 include( 'includes/admin/init.php' );
+include( 'process/save-post.php' );
 
 //	Hooks
 register_activation_hook( __FILE__, 'r_activate_plugin'  );
