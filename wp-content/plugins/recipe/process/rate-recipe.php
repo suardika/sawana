@@ -23,6 +23,7 @@ function r_rate_recipe() {
 		wp_send_json($response);
 	};
 
+	// Insert Rating
 	$wpdb->insert(
 		$wpdb->prefix . 'recipe_ratings',
 		array (
@@ -34,6 +35,16 @@ function r_rate_recipe() {
 			'%d', '%f', '%s'
 		)
 	);
+
+	// Update Metadata
+	$recipe_data			=	get_post_meta( $post_id, 'recipe_data', true );
+	$recipe_data['rating_count']++;
+	$recipe_data['rating']	=	round($wpdb->get_var 	
+											("
+												SELECT AVG(`rating`) FROM `" . $wpdb->prefix . "recipe_ratings` 
+												WHERE recipe_id='" . $post_id . "'
+											"), 1);
+	update_post_meta( $post_id, 'recipe_data', $recipe_data );
 
 	$response['status']		=	2;
 	wp_send_json ( $response );
