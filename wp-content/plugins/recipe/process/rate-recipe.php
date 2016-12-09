@@ -23,7 +23,7 @@ function r_rate_recipe() {
 		wp_send_json($response);
 	};
 
-	// Insert Rating
+	// Insert Rating 
 	$wpdb->insert(
 		$wpdb->prefix . 'recipe_ratings',
 		array (
