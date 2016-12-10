@@ -6,7 +6,7 @@ class R_Daily_Recipe_Widget extends WP_Widget {
 	 * Sets up the widgets name etc
 	 */
 	public function __construct() {
-		parent::__construct( 'r_daily_recipe_widget', 'Recipe of the Day', array(
+		parent::__construct( 'R_Daily_Recipe_Widget', 'Recipe of the Day', array(
 			'description'	=>	'Displays a random recipe each day'
 		));
 	}
@@ -19,7 +19,24 @@ class R_Daily_Recipe_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		// outputs the content of the widget
-		echo 'Recipe of the day';
+		// echo 'Recipe of the day';
+		extract( $args );
+		extract( $instance );
+
+		$title 			=	apply_filters( 'widget_title', $title );
+		echo $before_widget;
+		echo $before_title . $title . $after_title;
+
+		$recipe_id 		=	get_transient( 'r_daily_recipe' );
+
+
+		?>
+		<a href="<?php echo get_permalink($recipe_id); ?>"><?php echo get_the_title( $recipe_id ); ?></a>
+		<?php
+
+		echo $after_widget;
+
+
 	}
 
 	/**
