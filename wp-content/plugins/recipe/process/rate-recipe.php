@@ -46,6 +46,13 @@ function r_rate_recipe() {
 											"), 1);
 	update_post_meta( $post_id, 'recipe_data', $recipe_data );
 
+	// allow developper to extend this plugin
+	do_action( 'recipe_rating', array(
+		'id'		=>	$post_id,
+		'rating'	=>	$rating,
+		'ip'		=>	$user_ip
+	));
+
 	$response['status']		=	2;
 	wp_send_json ( $response );
 
