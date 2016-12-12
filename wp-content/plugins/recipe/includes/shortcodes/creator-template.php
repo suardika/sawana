@@ -12,7 +12,7 @@
 	<div class="form-group">
 		<label>Ingrediens</label>
 		<input type="text" class="form-control" id="r_inputIngredients">
-	</div>
+	</div> 
 	<div class="form-group">
 		<label>Cooking Time</label>
 		<input type="text" class="form-control" id="r_inputTime">
@@ -31,7 +31,7 @@
 	</div>
 	<div class="form-group">
 		<label>Meal Type</label>
-		<input type="text" class="form-control" id="r_inputMeal">
+		<input type="text" class="form-control" id="r_inputMealType">
 	</div>
 	<div class="form-group">
 		<button type="submit" class="btn btn-primary">Submit Recipe</button>

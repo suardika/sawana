@@ -10,9 +10,9 @@ function r_recipe_creator_shortcode() {
 
 function r_generate_content_editor() {
 	ob_start();
-	wp_editor( '', 'recipecontenteditor' );
+	wp_editor( '' , 'recipecontenteditor');
 	$editor_contents	=	ob_get_clean();
 	return $editor_contents;
 }
 
-add_filter( 'the_excerpt', 'r_recipe_creator_shortcode');
+// add_filter( 'the_excerpt', 'r_recipe_creator_shortcode');
