@@ -16,6 +16,7 @@ include ( get_template_directory() . '/includes/admin/menus.php' );
 include ( get_template_directory() . '/includes/admin/options-page.php' );
 include ( get_template_directory() . '/includes/admin/init.php' );
 include ( get_template_directory() . '/process/save-options.php' );
+include ( get_template_directory() . '/includes/shortcodes/facebook.php' );
 
 // Action & filter Hooks
 add_filter( 'show_admin_bar', '__return_false' );
@@ -27,3 +28,6 @@ add_action( 'admin_menu', 'sw_admin_menus' );
 add_action( 'admin_init', 'sw_admin_init' );
 
 // Shortcode
+
+add_shortcode( 'sfb', 'sw_facebook_shortcode' );
+add_shortcode( 'ui', 'sw_icon_shortcode' );
