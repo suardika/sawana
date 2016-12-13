@@ -9,7 +9,7 @@ function sw_enqueue() {
 	wp_register_style( 'sw_revnav', get_template_directory_uri() . '/assets/revolution/css/navigation.css');
 	wp_register_style( 'sw_fontowesame', get_template_directory_uri() . '/assets/fonts/font-awesome/css/font-awesome.min.css');
 	wp_register_style( 'sw_plugin', get_template_directory_uri() . '/assets/css/plugins.css');
-	wp_register_style( 'sawanatheme-style', get_stylesheet_uri() );
+	wp_register_style( 'sw_style', get_template_directory_uri() . '/assets/css/style.css');
 	wp_register_style( 'sw_custom', get_template_directory_uri() . '/assets/css/custom.css');
 
 	wp_enqueue_style( 'sw_roboto');
@@ -20,7 +20,7 @@ function sw_enqueue() {
 	wp_enqueue_style( 'sw_revnav');
 	wp_enqueue_style( 'sw_fontowesame');
 	wp_enqueue_style( 'sw_plugin');
-	wp_enqueue_style( 'sawanatheme-style');
+	wp_enqueue_style( 'sw_style');
 	wp_enqueue_style( 'sw_custom');
 
 	echo '<!--[if lt IE 9]>'. "\n";
