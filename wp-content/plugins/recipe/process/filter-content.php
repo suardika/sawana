@@ -23,11 +23,17 @@ function r_filter_recipe_content($content) {
 	$recipe_html		=	str_replace( "RECIPE_RATING", $recipe_data['rating'], $recipe_html );
 
 	$user_ip			=	$_SERVER['REMOTE_ADDR'];
-	$rating_count 		= 	$wpdb->get_var 	("
-											SELECT COUNT(*) FROM `" . $wpdb->prefix . "recipe_ratings` 
-											WHERE recipe_id='" . $post->ID . "'
-											AND user_ip='" . $user_ip . "'
-										");
+	// $rating_count 		= 	$wpdb->get_var( $wpdb->prepare(
+	// 	"SELECT COUNT(*) FROM `" . $wpdb->prefix . "recipe_ratings` 
+	// 	WHERE recipe_id='" . $post->ID . "' AND user_ip='" . $user_ip . "'",
+	// 	$post->ID, $user_ip
+	// ));
+
+	$rating_count 		= 	$wpdb->get_var( $wpdb->prepare(
+		"SELECT COUNT(*) FROM `" . $wpdb->prefix . "recipe_ratings` 
+		WHERE recipe_id=%d AND user_ip=%s",
+		$post->ID, $user_ip 
+	));
 
 	if($rating_count > 0) {
 		$recipe_html	=	str_replace( 'READONLY_PLACEHOLDER', 'data-rateit-readonly="true"', $recipe_html );

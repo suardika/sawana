@@ -4,6 +4,7 @@
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
+add_theme_support( 'post-formats', array( 'link', 'quote', 'video' ));
 
 // includes
 include ( get_template_directory() . '/includes/front/enqueue.php' );
@@ -18,8 +19,9 @@ include ( get_template_directory() . '/includes/admin/init.php' );
 include ( get_template_directory() . '/process/save-options.php' );
 include ( get_template_directory() . '/includes/shortcodes/facebook.php' );
 include ( get_template_directory() . '/includes/theme-customizer.php' );
+include ( get_template_directory() . '/includes/front/head.php' );
 
-// Action & filter Hooks
+// Action & filter Hooks 
 add_filter( 'show_admin_bar', '__return_false' );
 add_action( 'wp_enqueue_scripts', 'sw_enqueue' );
 add_action( 'after_setup_theme', 'sw_setup_theme' );
@@ -28,7 +30,7 @@ add_action( 'after_switch_theme', 'sw_activate' );
 add_action( 'admin_menu', 'sw_admin_menus' );
 add_action( 'admin_init', 'sw_admin_init' );
 add_action( 'customize_register', 'sw_customize_register' );
-add_action( 'wp_head', 'sw_had' );
+add_action( 'wp_head', 'sw_head' );
 
 
 // Shortcode
