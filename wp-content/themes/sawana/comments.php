@@ -37,7 +37,19 @@ if (post_password_required()) {
 			 * define bootstrapBasicComment() and that will be used instead.
 			 * See bootstrapBasicComment() in inc/template-tags.php for more.
 			 */
-			wp_list_comments(array('avatar_size' => '64', 'callback' => 'bootstrapBasicComment'));
+			// wp_list_comments(array('avatar_size' => '64', 'callback' => 'bootstrapBasicComment'));
+
+				if(get_post_type( $post ) == "wp_question") {
+					wp_list_comments('avatar_size=60&type=comment&callback=wpwa_comment_list&style=ul');
+		        }else {
+					wp_list_comments( array( 
+						'style' => 'ul',
+						'short_ping' => true,
+						'avatar_size' => 34,
+						'callback' => 'bootstrapBasicComment',
+						) );
+		        }
+
 			?>
 		</ul><!-- .comment-list -->
 
