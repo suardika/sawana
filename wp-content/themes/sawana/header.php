@@ -112,15 +112,25 @@ $theme_opts = get_option('sw_opts');
         <div class="navbar-collapse collapse">
 
           <?php
-            wp_nav_menu( array(
-                'menu'              => 'primary',
-                'theme_location'    => 'primary',
-                'depth'             => 4,
-                'container'         => false,
-                'menu_class'        => 'nav navbar-nav',
-                'fallback_cb'       => 'Yamm_Fw_Nav_Walker_menu_fallback',
-                'walker'            => new Yamm_Fw_Nav_Walker())
+            // wp_nav_menu( array(
+            //     'menu'              => 'primary',
+            //     'theme_location'    => 'primary',
+            //     'depth'             => 4,
+            //     'container'         => false,
+            //     'menu_class'        => 'nav navbar-nav',
+            //     'fallback_cb'       => 'Yamm_Fw_Nav_Walker_menu_fallback',
+            //     'walker'            => new Yamm_Fw_Nav_Walker())
+            // );
+          ?>          
+
+          <?php
+            $args = array(
+              'menu'              =>  'primary',
+              'menu_class'        =>  'nav navbar-nav',
+              'container'         =>  'false',
+              'walker'            =>  new WPT_Custom_Walker_Nav_Menu
             );
+            wp_nav_menu( $args );
           ?>
 
          <!-- end .nav navbar-nav --> 

@@ -1,29 +1,32 @@
 <?php
+/**
+ * Menu item custom fields example
+ *
+ * Copy this file into your wp-content/mu-plugins directory.
+ *
+ * @package Menu_Item_Custom_Fields_Example
+ * @version 0.2.0
+ * @author Dzikri Aziz <kvcrvt@gmail.com>
+ *
+ *
+ * Plugin name: Menu Item Custom Fields Example
+ * Plugin URI: https://github.com/kucrut/wp-menu-item-custom-fields
+ * Description: Example usage of Menu Item Custom Fields in plugins/themes
+ * Version: 0.2.0
+ * Author: Dzikri Aziz
+ * Author URI: http://kucrut.org/
+ * License: GPL v2
+ * Text Domain: menu-item-custom-fields-example
+ */
 
-// set up
-add_theme_support( 'menus' );
-add_theme_support( 'post-thumbnails' );
-add_theme_support( 'title-tag' );
-add_theme_support( 'post-formats', array( 'link', 'quote', 'video' ));
 
-// includes
-include ( get_template_directory() . '/includes/front/enqueue.php' );
-include ( get_template_directory() . '/includes/setup.php' );
-// require_once( get_template_directory() . '/includes/yamm-nav-walker.php' );
-require_once( get_template_directory() . '/includes/wp-bs-pagination.php' );
-include ( get_template_directory() . '/includes/widgets.php' );
-include ( get_template_directory() . '/includes/activate.php' );
-include ( get_template_directory() . '/includes/admin/menus.php' );
-include ( get_template_directory() . '/includes/admin/options-page.php' );
-include ( get_template_directory() . '/includes/admin/init.php' );
-include ( get_template_directory() . '/process/save-options.php' );
-include ( get_template_directory() . '/includes/shortcodes/facebook.php' );
-include ( get_template_directory() . '/includes/theme-customizer.php' );
-include ( get_template_directory() . '/includes/front/head.php' );
-
-require_once dirname( __FILE__ ) . '/menu-item-custom-fields/menu-item-custom-fields.php';
-require_once dirname( __FILE__ ) . '/includes/custom-walker.php';
-
+/**
+ * Sample menu item metadata
+ *
+ * This class demonstrate the usage of Menu Item Custom Fields in plugins/themes.
+ *
+ * @since 0.1.0
+ */
 class Menu_Item_Custom_Fields_Example {
 
 	/**
@@ -45,8 +48,8 @@ class Menu_Item_Custom_Fields_Example {
 		add_filter( 'manage_nav-menus_columns', array( __CLASS__, '_columns' ), 99 );
 
 		self::$fields = array(
-			'field_description' => __( 'Menu Description', 'menu-item-custom-fields-example' ),
-			// 'field-02' => __( 'Custom Field #2', 'menu-item-custom-fields-example' ),
+			'field_description' => __( 'Description', 'menu-item-custom-fields-example' ),
+			'field-02' => __( 'Custom Field #2', 'menu-item-custom-fields-example' ),
 		);
 	}
 
@@ -135,22 +138,3 @@ class Menu_Item_Custom_Fields_Example {
 	}
 }
 Menu_Item_Custom_Fields_Example::init();
-
-
-
-// Action & filter Hooks 
-add_filter( 'show_admin_bar', '__return_false' );
-add_action( 'wp_enqueue_scripts', 'sw_enqueue' );
-add_action( 'after_setup_theme', 'sw_setup_theme' );
-add_action( 'widgets_init', 'sw_widgets' );
-add_action( 'after_switch_theme', 'sw_activate' );
-add_action( 'admin_menu', 'sw_admin_menus' );
-add_action( 'admin_init', 'sw_admin_init' );
-add_action( 'customize_register', 'sw_customize_register' );
-add_action( 'wp_head', 'sw_head' );
-
-
-// Shortcode
-
-add_shortcode( 'sfb', 'sw_facebook_shortcode' );
-add_shortcode( 'ui', 'sw_icon_shortcode' );
