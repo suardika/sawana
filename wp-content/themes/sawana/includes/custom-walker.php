@@ -77,6 +77,10 @@ class WPT_Custom_Walker_Nav_Menu extends Walker {
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 
+		$item->description = get_post_meta( $item->ID, '_menu_item_field_description', true );
+ 
+		// var_export( $item );
+
 		/**
 		 * Filters the arguments for a single nav menu item.
 		 *
@@ -170,6 +174,9 @@ class WPT_Custom_Walker_Nav_Menu extends Walker {
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';
 		$item_output .= $args->link_before . $title . $args->link_after;
+		if ( $item->description != '' ) {
+			$item_output .= ' _ ' . $item->description;
+		}
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 

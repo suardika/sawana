@@ -22,7 +22,8 @@ include ( get_template_directory() . '/includes/theme-customizer.php' );
 include ( get_template_directory() . '/includes/front/head.php' );
 
 require_once dirname( __FILE__ ) . '/menu-item-custom-fields/menu-item-custom-fields.php';
-require_once dirname( __FILE__ ) . '/includes/custom-walker.php';
+// require_once dirname( __FILE__ ) . '/includes/custom-walker.php';
+require_once dirname( __FILE__ ) . '/includes/wp_bootstrap_navwalker.php';
 
 class Menu_Item_Custom_Fields_Example {
 

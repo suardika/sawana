@@ -128,7 +128,8 @@ $theme_opts = get_option('sw_opts');
               'menu'              =>  'primary',
               'menu_class'        =>  'nav navbar-nav',
               'container'         =>  'false',
-              'walker'            =>  new WPT_Custom_Walker_Nav_Menu
+              // 'walker'            =>  new WPT_Custom_Walker_Nav_Menu
+              'walker'            =>  new wp_bootstrap_navwalker              
             );
             wp_nav_menu( $args );
           ?>
