@@ -155,3 +155,10 @@ add_action( 'wp_head', 'sw_head' );
 
 add_shortcode( 'sfb', 'sw_facebook_shortcode' );
 add_shortcode( 'ui', 'sw_icon_shortcode' );
+
+
+// // woocommerce
+// function sawana_woocommerce_scripts() {
+//   wp_enqueue_style( 'custom-woocommerce-style', get_template_directory_uri() . '/assets/css/custom-woocommerce.css' );
+// }
+// add_action( 'wp_enqueue_scripts', 'sawana_woocommerce_scripts' );
